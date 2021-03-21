@@ -1,0 +1,10 @@
+@mixin clearfix {
+  &::after {
+    // content has to be set for a pseudo-element to appear
+    content: "";
+    // This could be display: block - we just need it to be a block-level element
+    display: table;
+    // Clear both float left and right
+    clear: both;
+  }
+}

@@ -1,0 +1,16 @@
+.btn {
+  border: 1px solid $color-white;
+  background-color: $color-black;
+  color: $color-white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: all 100ms ease-out;
+  backface-visibility: hidden;
+  display: inline-block;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

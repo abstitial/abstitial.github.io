@@ -1,0 +1,42 @@
+/*
+ * The universal selector does not select pseudo-elements
+ * by default. Box-sizing is not inherited by default -
+ * setting it as inherited here will allow us to grab
+ * it from the body element.
+ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*
+ * The browser default font size is typically 16px,
+ * so this this sets the font-size to 10px, for easier
+ * use w/ rem. By using a percentage instead of hard-coding,
+ * user settings to increase the system font size will be
+ * preserved, scaling the site up accordingly.
+ */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-grey-dark;
+  display: flex;
+  max-height: 100vh;
+  flex-direction: column; 
+}
+
+main {
+  flex-grow: 1;
+  background-image: linear-gradient(
+      to bottom right,
+      $color-grey-dark, 
+      rgba($color-grey-dark, 0.8)
+    ),
+    url('/img/pattern.svg');
+}

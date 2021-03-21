@@ -1,25 +1,91 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Wikar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/icon-font.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+  <title>Wikar</title>
 </head>
-<h1>Wikar Landing Page</h1>
 
 <body>
-  iOS App (Beta): <a href="https://testflight.apple.com/join/FRUEyKfo"> https://testflight.apple.com/join/FRUEyKfo </a>
-  <br>
-  <br>
-  Android App (Beta): <a href="https://play.google.com/apps/testing/com.NCSA.Wikar"> https://play.google.com/apps/testing/com.NCSA.Wikar </a>
-  <br>
-  <br>
-  Example QR Codes (Printout)
-  <br>
-  <img src="https://ptpimg.me/702adt.png" alt="CNC Cut Chair Design, Colter"><br>
-  CNC Cut Chair Design, Colter
-  <br>
-  <img src="https://ptpimg.me/77e3ip.png" alt="Figur im Anzug by Erwin Werm, Scanned by Studio Calas, 2020"><br>
-  Figur im Anzug by Erwin Werm, Scanned by Studio Calas, 2020
+  <header class="header">
+    <div class="header__container u-container">
+      <div class="header__logo">
+        <img src="img/logo.png" alt="Wikar logo">
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="section section-hero">
+      <div class="u-container u-center-text">
+        <h1 class="heading-primary">Welcome to Wikar</h1>
+        <div class="u-margin-bottom-small">
+          <div class="u-paragraph-block">
+            <p>
+              Authentic chambray pork belly hot chicken cred cornhole incididunt. Chillwave vegan raclette photo booth
+              lo-fi,
+              try-hard echo park tote bag locavore. Duis vinyl tofu food truck PBR&B. Gluten-free crucifix do coloring
+              book eu.
+            </p>
+          </div>
+        </div>
+        <div class="u-center-text">
+          <a class="btn" href="#download-section">
+            download app
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section u-margin-bottom-large" id="download-section">
+      <div class="u-container u-center-text">
+        <h1 class="heading-secondary">
+          Download the app
+        </h1>
+        <div class="section-download__cta">
+          <div>
+            <a href='https://testflight.apple.com/join/FRUEyKfo'>
+              <img class="section-download__badge section-download__badge--apple" alt='Download on the App Store'
+                src='/img/apple-badge.svg' />
+            </a>
+          </div>
+          <div>
+            <a href='https://play.google.com/apps/testing/com.NCSA.Wikar'>
+              <img class="section-download__badge" alt='Get it on Google Play'
+                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-qrc">
+      <div class="u-container u-center-text">
+        <h1 class="heading-secondary">
+          qrc examples
+        </h1>
+        <div class="section-qrc__examples-container">
+          <div class="section-qrc__example">
+            <img src="https://ptpimg.me/702adt.png" alt="CNC Cut Chair Design, Colter"><br>
+            <p>
+              CNC Cut Chair Design, Colter
+            </p>
+          </div>
+          <div class="section-qrc__example">
+            <img src="https://ptpimg.me/77e3ip.png"
+              alt="Figur im Anzug by Erwin Werm, Scanned by Studio Calas, 2020"><br>
+            <p>
+              Figur im Anzug by Erwin Werm, Scanned by Studio Calas, 2020
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

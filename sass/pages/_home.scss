@@ -1,0 +1,37 @@
+.section {
+  height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-download {
+  &__badge {
+    height: 10rem;
+
+    &--apple {
+      padding: 1rem;
+    }
+  }
+}
+
+.section-qrc {
+  &__examples-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__example {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    img {
+      max-width: 20rem;
+    }
+
+    p {
+      max-width: 20rem;
+    }
+  }
+}
