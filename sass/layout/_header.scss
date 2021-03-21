@@ -1,0 +1,21 @@
+/*
+ * Position is relative here so that we can position the logo-box
+ * and text-box using absolute positioning.
+ */
+.header {
+  height: 10rem;
+  background-color: $color-black;
+
+  &__container {
+    max-width: 50rem;
+  }
+
+  &__logo {
+    height: 10rem;
+    padding: 1rem;
+
+    img {
+      height: 100%;
+    }
+  }
+} 
