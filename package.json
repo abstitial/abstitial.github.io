@@ -4,9 +4,14 @@
   "description": "Wikar website",
   "main": "index.js",
   "scripts": {
-    "develop": "live-server",
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "yarn build:markup && yarn build:styles && yarn build:assets",
+    "build:markup": "cp src/pages/* dist/",
+    "build:styles": "mkdir dist/css && node-sass src/sass/main.scss dist/css/style.css",
+    "build:assets": "mkdir dist/assets && cp assets/* dist/assets/",
     "compile:sass:watch": "npm run compile:sass && npm run compile:sass -- -w",
-    "compile:sass": "node-sass sass/main.scss css/style.css"
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "develop": "live-server"
   },
   "author": "Pawel Grimm <developer@pawelgrimm.com>",
   "license": "ISC",
