@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir -p dist/{css,assets}",
-    "build": "yarn build:markup && yarn build:styles && yarn build:assets",
+    "build": "yarn build:markup && yarn build:styles && yarn build:assets && yarn build:cname",
     "build:markup": "cp src/pages/* dist/",
     "build:styles": "node-sass src/sass/main.scss dist/css/style.css",
     "build:assets": "cp assets/* dist/assets/",
+    "build:cname": "cp CNAME dist/",
     "develop": "yarn build && concurrently -c \"red,blue,green,white\" -n \"markup,styles,assets,serve\" \"yarn watch:markup\" \" yarn watch:styles\" \"yarn watch:assets\" \"yarn watch:serve\"",
     "watch:markup": "nodemon -x yarn build:markup -w src/pages -e html",
     "watch:styles": "yarn run build:styles -w",
