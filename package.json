@@ -4,7 +4,7 @@
   "description": "Wikar website",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf dist && mkdir -p dist/{css,assets}",
+    "prebuild": "rm -rf dist && mkdir -pv dist/css dist/assets",
     "build": "yarn build:markup && yarn build:styles && yarn build:assets && yarn build:cname",
     "build:markup": "cp src/pages/* dist/",
     "build:styles": "node-sass src/sass/main.scss dist/css/style.css",
