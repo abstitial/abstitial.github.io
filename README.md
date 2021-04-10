@@ -1,27 +1,21 @@
 # README
 
-To make changes to the styling, you will need to install [NodeJS](https://nodejs.org/en/)
+To run the site locally, you will need to install [NodeJS](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/docs/install/)
 
-To install dependencies, run:
+## Development
+
+First, clone the repo.
+
+Install dependencies by running:
 ```bash
-$ npm install
+$ yarn install
 ```
 
-Sass is used as the css pre-processor. To compile to css, run:
+The `develop` script will watch your local files for changes, compile them on the fly, and serve them. Your browser should refresh automatically as changes are detected. To start development, run:
 ```bash
-$ npm run compile:sass
+$ yarn develop
 ```
 
-Alternatively, to watch for file changes, run:
-```bash
-$ npm run compile:sass:watch
-```
+## Deployment
 
-To serve locally, install live-server, then run the develop script:
-```bash
-$ npm install live-server
-```
-
-```bash
-$ npm run develop
-```
+A GitHub action is set up to run whenever changes are pushed to the `main` branch. It will build the site and push changes to the `production` branch.
