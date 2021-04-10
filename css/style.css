@@ -30,7 +30,7 @@ body {
 
 main {
   flex-grow: 1;
-  background-image: linear-gradient(to bottom right, #191919, rgba(25, 25, 25, 0.8)), url("/img/pattern.svg"); }
+  background-image: linear-gradient(to bottom right, #191919, rgba(25, 25, 25, 0.8)), url("/assets/pattern.svg"); }
 
 body {
   font-family: "Lato", sans-serif;
