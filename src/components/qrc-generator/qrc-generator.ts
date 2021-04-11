@@ -1,8 +1,17 @@
 import { transformUrl } from "./url-transformer.js";
+import QrCode from "./qrcodegen.js";
 
 function main(): void {
   const inputElement = document.getElementById("url-input") as HTMLInputElement;
-  const outputElement = document.getElementById("url-output");
+  const outputElement = document.getElementById(
+    "qrc-output-text"
+  ) as HTMLParagraphElement;
+  const canvasElement = document.getElementById(
+    "qrc-output-canvas"
+  ) as HTMLCanvasElement;
+  const imageElement = document.getElementById(
+    "qrc-output-image"
+  ) as HTMLImageElement;
 
   if (inputElement === null || outputElement === null) {
     throw new Error(
@@ -18,10 +27,18 @@ function main(): void {
     let output = "";
     try {
       output = transformUrl(this.value);
+      const qrc = QrCode.encodeText(output, QrCode.Ecc.MEDIUM);
+      qrc.drawCanvas(8, 4, canvasElement);
+      imageElement.src = canvasElement.toDataURL();
+      output = "";
+      outputElement.classList.add("hidden");
+      imageElement.classList.remove("hidden");
     } catch (e) {
       output = e.message;
+      imageElement.classList.add("hidden");
+      outputElement.classList.remove("hidden");
     }
-    outputElement.innerHTML = `<p>${output}</p>`;
+    outputElement.innerHTML = output;
   });
 }
 

@@ -1,0 +1,7 @@
+.qrc-generator {
+  width: clamp(60rem, 60rem, 95vw);
+
+  &__canvas {
+    display: none;
+  }
+}
