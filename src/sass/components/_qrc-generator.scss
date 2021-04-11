@@ -1,7 +1,29 @@
 .qrc-generator {
-  width: clamp(60rem, 60rem, 95vw);
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  max-width: 75vw;
+  align-items: stretch;
 
   &__canvas {
     display: none;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    $border: 4px;
+    background: $color-black;
+    color: $color-white;
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+
+  }
+
+  &__image {
+    max-width: 320px;
+    margin: 0 auto;
   }
 }

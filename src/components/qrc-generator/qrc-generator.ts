@@ -7,16 +7,21 @@ function main(): void {
     "qrc-output-text"
   ) as HTMLParagraphElement;
   const canvasElement = document.getElementById(
-    "qrc-output-canvas"
+    "qrc-canvas"
   ) as HTMLCanvasElement;
-  const imageElement = document.getElementById(
-    "qrc-output-image"
-  ) as HTMLImageElement;
+  const imageElement = document.getElementById("qrc-image") as HTMLImageElement;
+  const imageLabel = document.getElementById(
+    "qrc-image-label"
+  ) as HTMLLabelElement;
 
-  if (inputElement === null || outputElement === null) {
-    throw new Error(
-      "QRC generator inputElement or Output elements are missing"
-    );
+  if (
+    inputElement === null ||
+    outputElement === null ||
+    canvasElement === null ||
+    imageElement === null ||
+    imageLabel === null
+  ) {
+    throw new Error("QRC generator elements are missing");
   }
 
   inputElement.addEventListener("input", function (this: HTMLInputElement) {
@@ -33,9 +38,11 @@ function main(): void {
       output = "";
       outputElement.classList.add("hidden");
       imageElement.classList.remove("hidden");
+      imageLabel.classList.remove("hidden");
     } catch (e) {
       output = e.message;
       imageElement.classList.add("hidden");
+      imageLabel.classList.add("hidden");
       outputElement.classList.remove("hidden");
     }
     outputElement.innerHTML = output;

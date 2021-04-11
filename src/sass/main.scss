@@ -8,7 +8,10 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/qrc-generator";
 
 @import "layout/header";
+@import "layout/section";
 
 @import "pages/home";
+@import "pages/_qrc-generator";
