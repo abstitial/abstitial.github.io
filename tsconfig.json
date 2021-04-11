@@ -1,11 +1,16 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
-  "files": ["src/components/qrc-generator/url-transformer.ts"],
+  "files": [
+    "src/components/qrc-generator/url-transformer.ts",
+    "src/components/qrc-generator/qrc-generator.ts"
+  ],
   "compilerOptions": {
     "outDir": "dist/js",
     "lib": [
       "ESNext",
       "dom"
-    ]
-  },
+    ],
+    "module": "ES6",
+    "target": "ES2015"
+  }
 }

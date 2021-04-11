@@ -12,11 +12,11 @@ const parseUrl = (url: string): { dataType: string; dataId: string } => {
   const [, , dataType, dataId] = pathname.split("/");
   if (dataType === undefined || dataId === undefined) {
     throw new Error(
-      `URL ${url} does not match format {...}/clowder/{data_type}/{id}`
+      `URL path "${pathname}" does not match the format "/clowder/{data_type}/{id}"`
     );
   }
   if (!allowedTypes.includes(dataType)) {
-    throw new Error(`Data type ${dataType} is not supported`);
+    throw new Error(`Data type "${dataType}" is not supported`);
   }
   return { dataType, dataId };
 };
