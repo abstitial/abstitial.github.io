@@ -58,6 +58,12 @@ body {
     .heading-secondary {
       font-size: 2.4rem; } }
 
+.label-text {
+  color: #fff;
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-transform: lowercase; }
+
 p {
   font-size: 1.6rem; }
   p:not(:last-child) {
@@ -93,6 +99,9 @@ p {
   max-width: 40rem;
   margin: 0 auto; }
 
+.hidden {
+  display: none; }
+
 .btn {
   border: 1px solid #fff;
   background-color: #000;
@@ -106,6 +115,27 @@ p {
   display: inline-block; }
   .btn:hover {
     transform: scale(1.05); }
+
+.qrc-generator {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  max-width: 75vw;
+  align-items: stretch; }
+  .qrc-generator__canvas {
+    display: none; }
+  .qrc-generator__input {
+    padding: 1.5rem;
+    background: #000;
+    color: #fff;
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    text-align: center;
+    position: relative;
+    display: inline-block; }
+  .qrc-generator__image {
+    max-width: 320px;
+    margin: 0 auto; }
 
 /*
  * Position is relative here so that we can position the logo-box
@@ -146,3 +176,6 @@ p {
     max-width: 20rem; }
   .section-qrc__example p {
     max-width: 20rem; }
+
+section.section-qrc-generator {
+  justify-content: start; }
