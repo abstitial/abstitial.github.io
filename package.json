@@ -4,24 +4,46 @@
   "description": "Wikar website",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf dist && mkdir -pv dist/css dist/assets",
-    "build": "yarn build:markup && yarn build:styles && yarn build:assets && yarn build:cname",
+    "prebuild": "rm -rf dist && mkdir -pv dist/css dist/assets dist/js",
+    "build": "yarn build:markup && yarn build:styles && yarn build:assets && yarn build:scripts && yarn build:cname",
     "build:markup": "cp src/pages/* dist/",
     "build:styles": "node-sass src/sass/main.scss dist/css/style.css",
     "build:assets": "cp assets/* dist/assets/",
     "build:cname": "cp CNAME dist/",
-    "develop": "yarn build && concurrently -c \"red,blue,green,white\" -n \"markup,styles,assets,serve\" \"yarn watch:markup\" \" yarn watch:styles\" \"yarn watch:assets\" \"yarn watch:serve\"",
+    "build:scripts": "tsc",
+    "develop": "yarn build && concurrently -c \"red,blue,green,yellow,white\" -n \"markup,styles,assets,scripts,serve\" \"yarn watch:markup\" \" yarn watch:styles\" \"yarn watch:assets\" \"yarn watch:scripts\" \"yarn watch:serve\"",
     "watch:markup": "nodemon -x yarn build:markup -w src/pages -e html",
-    "watch:styles": "yarn run build:styles -w",
+    "watch:styles": "yarn build:styles -w",
     "watch:assets": "nodemon -x yarn build:assets -w assets -e png,svg,jpg,jpeg,bmp,ico",
-    "watch:serve": "live-server dist/"
+    "watch:scripts": "yarn build:scripts -w",
+    "watch:serve": "live-server dist/",
+    "test": "jest"
   },
   "author": "Pawel Grimm <developer@pawelgrimm.com>",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "5.0.0",
+    "@tsconfig/recommended": "1.0.1",
+    "@types/jest": "26.0.22",
+    "@typescript-eslint/eslint-plugin": "4",
+    "@typescript-eslint/parser": "4.21.0",
     "concurrently": "6.0.1",
+    "eslint": "7",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-config-standard-with-typescript": "20.0.0",
+    "eslint-plugin-import": "2",
+    "eslint-plugin-jest": "24.3.5",
+    "eslint-plugin-node": "11",
+    "eslint-plugin-promise": "4",
+    "jest": "26.6.3",
     "live-server": "1.2.1",
-    "nodemon": "2.0.7"
+    "node-sass": "5.0.0",
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1",
+    "ts-jest": "26.5.4",
+    "typescript": "4.2.4"
+  },
+  "dependencies": {
+    "url": "0.11.0"
   }
 }
