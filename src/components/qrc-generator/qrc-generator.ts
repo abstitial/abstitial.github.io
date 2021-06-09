@@ -6,9 +6,6 @@ function main(): void {
   const outputElement = document.getElementById(
     "qrc-output-text"
   ) as HTMLParagraphElement;
-  const canvasElement = document.getElementById(
-    "qrc-canvas"
-  ) as HTMLCanvasElement;
   const imageElement = document.getElementById("qrc-image") as HTMLImageElement;
   const imageLabel = document.getElementById(
     "qrc-image-label"
@@ -17,7 +14,6 @@ function main(): void {
   if (
     inputElement === null ||
     outputElement === null ||
-    canvasElement === null ||
     imageElement === null ||
     imageLabel === null
   ) {
@@ -33,8 +29,9 @@ function main(): void {
     try {
       output = transformUrl(this.value);
       const qrc = QrCode.encodeText(output, QrCode.Ecc.MEDIUM);
-      qrc.drawCanvas(8, 4, canvasElement);
-      imageElement.src = canvasElement.toDataURL();
+      const svg = qrc.toSvgString(4);
+      const svgBlob = new Blob([svg], { type: "image/svg+xml" });
+      imageElement.src = URL.createObjectURL(svgBlob);
       output = "";
       outputElement.classList.add("hidden");
       imageElement.classList.remove("hidden");
