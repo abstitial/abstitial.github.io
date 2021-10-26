@@ -1,0 +1,280 @@
+{
+  "shuffle": true,
+  "roundPrefs": [
+    {
+      "name": "practice",
+      "cogload": false,
+      "percload": false,
+      "adapt": true,
+      "timeLimit": 60,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 20.0,
+      "powerUpDur": 10.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "First, you will play a brief practice round."
+      ]
+    },
+    {
+      "name": "baseline",
+      "cogload": false,
+      "percload": false,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round you may collect any crystal you wish. All crystals are worth the same amount of points."
+      ]
+    },
+    {
+      "name": "cogload",
+      "cogload": true,
+      "percload": false,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round, some of the crystals are dangerous! If you collect two of the same crystal in a row you will lose 100 points!"
+      ]
+    },
+    {
+      "name": "percload",
+      "cogload": false,
+      "percload": true,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round, you may collect any crystal you wish. All crystals are worth the same amount of points.",
+        "Your ship's display is foggy! This round may be difficult to see!"
+      ]
+    },
+    {
+      "name": "baseline",
+      "cogload": false,
+      "percload": false,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round you may collect any crystal you wish. All crystals are worth the same amount of points."
+      ]
+    },
+    {
+      "name": "cogload",
+      "cogload": true,
+      "percload": false,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round, some of the crystals are dangerous! If you collect two of the same crystal in a row you will lose 100 points!"
+      ]
+    },
+    {
+      "name": "percload",
+      "cogload": false,
+      "percload": true,
+      "adapt": true,
+      "timeLimit": 180,
+      "crystalValue": 10,
+      "crystalDur": 10.0,
+      "asteroidSpeed": 2.0,
+      "probeProbs": [
+        75.0,
+        25.0
+      ],
+      "exactProbePlacement": false,
+      "powerUpFreq": 60.0,
+      "powerUpDur": 15.0,
+      "probeFreq": 12.0,
+      "probePrefs": [
+        {
+          "probeValue": 10,
+          "probeDur": 10.0,
+          "correctKey": 122,
+          "probeImg": "triangle.png",
+          "probeTone": "tone440",
+          "probeOnsets": []
+        },
+        {
+          "probeValue": 100,
+          "probeDur": 10.0,
+          "correctKey": 120,
+          "probeImg": "square.png",
+          "probeTone": "tone659",
+          "probeOnsets": []
+        }
+      ],
+      "instructions": [
+        "In this round, you may collect any crystal you wish. All crystals are worth the same amount of points.",
+        "Your ship's display is foggy! This round may be difficult to see!"
+      ]
+    }
+  ]
+}
