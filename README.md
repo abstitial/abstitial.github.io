@@ -1,19 +1,21 @@
 # README
 
-To run the site locally, you will need to install [NodeJS](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/docs/install/)
+To run the site locally, you will need to install [NodeJS](https://nodejs.org/en/).
 
 ## Development
 
-First, clone the repo.
+First, clone the repo. 
+
+In a terminal, go to the directory where you cloned this repo.
 
 Install dependencies by running:
 ```bash
-$ yarn install
+$ npm install
 ```
 
 The `develop` script will watch your local files for changes, compile them on the fly, and serve them. Your browser should refresh automatically as changes are detected. To start development, run:
 ```bash
-$ yarn develop
+$ npm run develop
 ```
 
 ## Deployment
