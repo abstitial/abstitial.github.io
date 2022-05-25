@@ -17,6 +17,7 @@ beforeEach(() => {
 describe("URL transformer tests", () => {
   it("should transform urls", () => {
     for (const testCase of testCases) {
+      //console.log(testCase)
       const result = transformUrl(inputUrlPrefix + testCase[0]);
       expect(result).toEqual(outputUrlPrefix + testCase[1]);
     }
