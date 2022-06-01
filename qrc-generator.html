@@ -22,7 +22,7 @@
 <main>
   <section class="section section-qrc-generator">
     <div class="u-container u-center-text">
-      <h1 class="heading-primary">Generate QRC</h1>
+      <h1 class="heading-primary">Generate QR Code</h1>
       <div class="qrc-generator">
         <label class="label-text u-margin-bottom-xsmall" for="url-input">
           Resource URL
@@ -32,9 +32,17 @@
                   placeholder="enter resource url here" rows="1"></textarea>
         <p class="qrc-generator__output hidden" id="qrc-output-text"></p>
         <label class="label-text u-margin-bottom-xsmall hidden" id="qrc-image-label" for="qrc-image">
-          generated qrc
+          generated qr code
         </label>
         <img id="qrc-image" class="qrc-generator__image hidden" src="" alt="generated QR code">
+        <!-- qrc-text-output is where the generator will target with the final text, setting its inner text to the value -->
+        <!-- add a space under -->
+        <p>
+        <label id="qrc-text-output" class="label-text u-margin-bottom-xsmall hidden" for="qrc-image">
+          Output text
+        </label>
+        </p>
+        
       </div>
     </div>
   </section>

@@ -16,6 +16,7 @@ const parseUrl = (url) => {
     }
     return { dataType, dataId };
 };
+// PREFAB -> P 
 const getDataTypeKey = (dataType) => {
     return dataType.substring(0, 1);
 };
